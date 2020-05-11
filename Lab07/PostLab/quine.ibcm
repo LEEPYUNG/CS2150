@@ -1,0 +1,21 @@
+C008 000	jmp 	start 	skip around the variables PYUNG LEE PKL4FR POSTLAB07 
+0013 001 size 	dw 	13 	size of program
+0001 002 one 	dw 	1 	
+3000 003 ldit 	dw 	3000 	
+6000 004 sdit 	dw 	6000	
+0000 005 i 	dw	0	int i  	 		
+0000 006
+0000 007
+3001 008 start	load	size	
+6005 009 	sub	i	(check if i > size)
+E015 00A	jumpl	end
+3003 00B	load	ldit
+5005 00C	add	i	load 3000 + i
+400E 00D	store	doit	store the instruction 
+0000 00E doit	dw		get the address at this instruction
+1800 00F	printH		print whats in accumulator
+3005 010	load	i
+5002 011	add	one	add one to i
+4005 012	store	i	store it back into i
+C008 013        jmp	start
+0000 014 end	halt			

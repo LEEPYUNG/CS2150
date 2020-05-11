@@ -1,0 +1,37 @@
+/* 
+	Name: Pyung Lee
+	Email ID: pkl4fr
+	Date:1/27/2020
+	File Name:postfixCalculator.cpp
+
+	Sources: 
+	youtube.com/watch?v=t0hJ7YOWwBY - how to implement stack STL
+*/
+
+#include "postfixCalculator.h"
+#include <stack>
+using namespace std;
+
+postfixCalculator::postfixCalculator(){
+  stack<int> myStack;
+
+//Add top two numbers on stack, return sum.
+  int postfixCalculator::add(){
+    int x = myStack.pop();
+    int y = myStack.pop();
+    int z = x + y;
+    myStack.push(z);
+  }
+ 
+//Subtract top two numbers on stack, return difference.
+int subtract();
+ 
+//Multiply top two numbers on stack, return product.
+nt multiply();
+ 
+//Divide top two numbers on stack, return divisor.
+int divide();
+ 
+//Multiply top number of stack by -1 and return it.
+int negate();
+}

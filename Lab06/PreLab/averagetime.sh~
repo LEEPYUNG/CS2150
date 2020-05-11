@@ -1,0 +1,37 @@
+#!/bin/bash
+# 
+#	Name: Pyung Lee
+#	Email ID: pkl4fr
+#	Date: 3/3/2020
+#	File Name: averagetime.sh
+
+
+
+
+#Read in dictionary + grid
+read dictionary 
+read grid
+
+#calculate run times
+RUNNING_TIME1=`./a.out $dictionary $grid | tail -1`
+RUNNING_TIME2=`./a.out $dictionary $grid | tail -1`
+RUNNING_TIME3=`./a.out $dictionary $grid | tail -1`
+RUNNING_TIME4=`./a.out $dictionary $grid | tail -1`
+RUNNING_TIME5=`./a.out $dictionary $grid | tail -1`
+
+
+#sum them all up. I multiplied the time.getTime() value by 1000000 to change all the decimals into integers.
+
+sum1=`expr $RUNNING_TIME1 + $RUNNING_TIME2`
+sum2=`expr $RUNNING_TIME3 + $RUNNING_TIME3`
+sum3=`expr $sum1 + $sum2`
+total=`expr $sum3 + $RUNNING_TIME5`
+
+#find average
+average=`expr $((total/5))`
+echo $average
+
+#print out average
+#echo "The average time in millisceconds: "
+#echo $average
+

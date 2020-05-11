@@ -1,0 +1,32 @@
+C00A 000	jmp 	start 	skip around the variables PYUNG LEE PKL4FR PRELAB07 
+0000 001 a 	dw 	0 	int a
+0000 002 b 	dw 	0 	int b
+0000 003 c 	dw 	0 	int c
+0000 004 sum 	dw 	0	constant
+0000 005 zero 	dw 	0	constant
+0000 006			leave space for changes
+0000 007
+0000 008
+0000 009
+1000 00A start 	readH 		read a
+4001 00B 	store	a
+1000 00C 	readH 	 	read b
+4002 00D 	store 	b
+1000 00E 	readH 	 	read c
+4003 00F 	store 	c
+3005 010   	load 	zero 	load 0 onto accumulator
+4004 011 	store 	sum	set sum = 0
+5001 012 	add  	a	accumulator += a
+5002 013 	add  	b	accumulator += b
+5003 014 	add 	c	accumulator += c
+4004 015 	store 	sum	store accumulator value into sum
+3004 016 	load 	sum 	load sum
+D019 017 	jmp 	xit	Jump to end if sum == 0
+C00A 018 	jmp 	start	jumpt to start else
+3001 019  xit	load 	a 	load a
+1800 01A   	printH 	 	print a
+3002 01B  	load 	b 	load b
+1800 01C   	printH 	 	print b
+3003 01D  	load 	c 	load c
+1800 01E   	printH 	 	print c
+0000 01F 	halt 		halt

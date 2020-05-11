@@ -1,0 +1,29 @@
+// mathfun.cpp
+
+#include <iostream>
+
+using namespace std;
+
+extern "C" long mathlib (long, long);
+
+// Purpose: This main program produces a returns the product of two parameters
+
+
+int  main () {
+
+    // delcare the local variables
+    long  a,b, product;
+
+    // how big is the array we want to use?
+    cout << "Please enter a number:  ";
+    cin >> a;
+    cout << "Please enter another number:  ";
+    cin >> b;
+
+    // find product  and print out results
+    product = mathlib(a,b);
+    cout << "The product of the numbers  is " << product << endl;
+
+    // all done!
+    return 0;
+}

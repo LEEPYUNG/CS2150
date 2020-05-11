@@ -1,0 +1,23 @@
+/* 
+	Name: Pyung Lee
+	Email ID: pkl4fr
+	Date:1/27/2020
+	File Name:List.cpp
+*/
+
+#include "List.h"
+#include <iostream>
+using namespace std;
+
+//Constructor + destructors - no return types.
+Lists::Lists() {
+  count = 0;
+  head = NULL;
+  tail = NULL;
+}
+
+//Copy Constructor
+List::List(const List& source){
+  count 
+}
+

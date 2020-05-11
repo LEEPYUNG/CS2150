@@ -1,0 +1,29 @@
+/* 
+	Name: Pyung Lee
+	Email ID: pkl4fr
+	Date:2/3/2020
+	File Name: testPostfixCalc.cpp
+*/
+
+#include "postfixCalculator.h"
+#include <stack>
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+int main(){
+  
+  postfixCalculator p;
+  
+  p.pushNum(1);
+  cout << "this is top" <<  p.myStack.top() << endl;
+  p.pushNum(2);
+  cout << "this is top" <<  p.myStack.top() << endl;
+  p.pushNum(3);
+  cout << "this is top" <<  p.myStack.top() << endl;
+  p.negate();
+  cout << "this is top" <<  p.myStack.top() << endl;
+
+ 
+  return 0;
+}

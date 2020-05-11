@@ -1,0 +1,8 @@
+/* 
+	Name: Pyung Lee
+	Email ID: pkl4fr
+	Date:1/21/2020
+	File Name:postlab1.question.txt
+*/
+
+What is the benefit of utilizing a pointer to refer to a list? In every instance where a pointer is created, is it absolutely required to delete the pointer? 

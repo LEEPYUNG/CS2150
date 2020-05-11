@@ -1,0 +1,11 @@
+/* 
+	Name: Pyung Lee
+	Email ID: pkl4fr
+	Date:2/6/2020
+	File Name: difficulties.txt
+*/
+
+For this post lab I implemented my code from LAB2 to create a linked list for a stack. 
+
+-I tried to first create a singly linked list, but this was diffilcult because I didn't know how to access the last item on the stack. So I just used a doubly linked list and used the TAIL pointer to get the top of the stack.
+-When trying to use a singly linked list I tried to use the iterator to get the last node in the stack. But I had issues getting the iterator working. The code became long and arduous to follow so I ended up not using it and just using the TAIL pointer as my "iterator".

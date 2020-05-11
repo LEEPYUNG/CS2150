@@ -1,0 +1,1 @@
+1) What is the major benefit of UNIX OS than windows? Couldn't we perform all these tasks on a windows operating system?

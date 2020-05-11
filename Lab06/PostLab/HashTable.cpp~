@@ -1,0 +1,28 @@
+/* 
+	Name: Pyung Lee
+	Email ID: pkl4fr
+	Date: 3/3/2020
+	File Name: HashTable.h
+*/
+// HashTable.h
+// CS 2150: Lab 6
+
+
+#ifndef HASHTABLE_H
+#define HASHTABLE_H
+
+#include <vector>
+using namespace std;
+
+class HashTable {
+public:
+    HashTable();                     // Constructor
+       
+    int hashFunction(string word);  // Deletes tree/frees memory
+    void insert(string word);       // Gets data from user
+    void find(string word);         // Puts value in tree
+
+
+};
+
+#endif

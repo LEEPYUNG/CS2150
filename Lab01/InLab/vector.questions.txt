@@ -1,0 +1,7 @@
+/* 
+	Name: Pyung Lee
+	Email ID: pkl4fr
+	Date: 1/21/2020
+	File Name: vector.questions.txt
+*/
+What is the relationship between the three files and the inclusions of the "include" statements? Does the first change (commenting out the include <iostream>) still work regardless because the .h file still has that the include <iostream> statement?

@@ -1,0 +1,9 @@
+/* 
+	Name: Pyung Lee
+	Email ID: pkl4fr
+	Date: 1/21/2020
+	File Name: lifecycle.questions.txt
+*/
+
+
+Is the destructor constructor its own object separate object in C++? Could I call methods using an object created with a destrutor constructor?

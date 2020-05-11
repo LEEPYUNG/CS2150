@@ -1,0 +1,76 @@
+C00E 000	jmp 	start 	skip around the variables Pyung Lee - PKL4FR - INLAB07 
+0000 001 i 	dw 	0 	int i
+0002 002 j 	dw 	2 	int j
+0048 003 a 	dw 	48 	int a[] (base value)
+0000 004 temp  	dw 	0	temp to hold values
+0000 005 zero 	dw 	0
+0001 006 one 	dw 	1
+0002 007 two 	dw 	2
+5000 008 adit 	dw 	5000
+3000 009 ldit	dw 	3000	
+0003 00A MAX	dw	3	Max size of Array (size)	
+0001 00B k	dw	1	j - 1, to get the value before j.
+6000 00C sdit	dw 	6000	
+4000 00D stdit	dw 	4000	
+C00F 00E start 	jmp 	loop1	
+300A 00F loop1  load 		OuterLoop - Load Max to check conditional
+6001 010 	sub 	i	if( i > MAX) goto xit
+E04B 011 	jmpl 	xit
+D04B 012	jmpe	xit	
+3002 013 loop2  load 		InnerLoop - Load j to check conditional
+6001 014 	sub 	i	if( i > j) goto xit
+E029 015 	jmpl 	xit
+D029 016	jmpe	xit	
+3009 017 	load 	adit	get the address of the a[j]
+5003 018 	add 	a	add base value
+5002 019 	add 	j	add j 
+401F 01A 	store 	doit 	store this address OF A[j]
+300C 01B 	load 	adit	get the address of the a[j-1]
+5003 01C 	add 	a	add base value
+500B 01D 	add 	k	add k 
+4020 01E 	store 	doit 	store this address OF A[j-1]
+0000 01F 	dw 	0 	load A[j] in accumulator
+0000 020 doit 	dw 	0	check if A[j] > A[j-1]
+E031 021 	jmpl 	CV	jump to CV (change variables) 
+3002 022 r2     load 	j 	load j
+6006 023  	sub 	one	j -= 1
+4002 024 	store 	j
+300B 025 	load 	k 	k -= 1
+6006 026 	sub 	one
+400B 027 	store 	k
+C013 028	jmp	loop2	go back to beginning of innerloop
+3001 029        load 	i 	load i
+5006 02A  	add 	one	i+= 1
+4001 02B 	store 	i
+3007 02C	load 	two
+4002 02D	store	j	set j = 2
+3006 02E	load 	one
+400B 02F	store	k	set k = 1
+C00F 030	jmp	loop1	go back to beginning of outerloop
+3009 031 CV	load 	adit	get the address of the a[j]
+5003 032 	add 	a	add base value
+5002 033 	add 	j	add j 
+4035 034 	store 	doit 	store this address OF A[j]
+0000 035 	dw 	0 	load A[j] in accumulator
+4004 036	store	temp	Store this value in temp
+300D 037 CV	load 	adit	get the address of the a[j]
+5003 038 	add 	a	add base value
+500B 039 	add 	k	add k 
+4046 03A 	store 	doit 	store this address OF a[j]
+300D 03B CV	load 	adit	get the address of the a[j-1]
+5003 03C 	add 	a	add base value
+5002 03D 	add 	j	add j 
+4044 03E 	store 	doit 	store this address OF a[j-1]
+3009 03F 	load 	adit	get the address of the a[j-1]
+5003 040 	add 	a	add base value
+500B 041 	add 	k	add k 
+4043 042 	store 	doit 	store this address OF a[j-1]
+0000 043	dw	0	load the value of a[j-1] into accumulator
+0000 044 	dw 	0 	load A[j] in accumulator
+3004 045 	load 	temp	get the value in temp
+0000 046	dw	0	Store this value in a[j-1]
+C021 047		jmp	r2	jump back to end of innerLoop
+0012 048 a[0]	dw		12	
+0005 049 a[1]	dw		5
+0010 04A a[2]	dw		10	
+0000 04B xit	halt
